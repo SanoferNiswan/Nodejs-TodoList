@@ -1,0 +1,24 @@
+### get the UI page
+
+GET http://localhost:3000/
+
+
+### create new user
+
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "username":"sano",
+    "password":"sanofer"
+}
+
+### login user
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username":"sano",
+    "password":"sanofer"
+}

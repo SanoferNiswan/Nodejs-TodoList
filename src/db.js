@@ -10,7 +10,7 @@ db.exec('PRAGMA foreign_keys = ON');
 db.exec(`
     CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT UNIQUE,
+    username TEXT UNIQUE,
     password TEXT
    )
 `)

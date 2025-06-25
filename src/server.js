@@ -13,6 +13,8 @@ const __filename = fileURLToPath(import.meta.url);
 
 // get directory name from file path
 const __dirname = dirname(__filename);
+console.log(__dirname,"?dir");
+
 
 // middleware
 
@@ -21,16 +23,13 @@ app.use(express.static(path.join(__dirname,"../public"))) // Serve files in publ
 app.use(express.json()); // Allow to accept json
 
 // Serve html file 
-app.use(`/`,(req,res)=>{
-    res.sendFile(path.join(__dirname,'public','index.html'))
+app.get(`/`,(req,res)=>{
+    res.sendFile(path.join(__dirname,'../public','index.html'))
 })
 
 app.use('/auth',authRoutes);
 
 app.use('/todos',todoRoutes);
-
-
-console.log("Hello world");
 
 app.listen(PORT,()=>{
     console.log(`Server is running on ${PORT}`);
