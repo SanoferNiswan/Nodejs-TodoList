@@ -22,3 +22,10 @@ Content-Type: application/json
     "username":"sano",
     "password":"sanofer"
 }
+
+
+### fetch all todos
+
+GET http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTc1NTUxLCJleHAiOjE3NTMyNjE5NTF9.dFasc-wrgH8WFJW-BEaWz5ohqTcqOh1skRbA9gsODaU
+

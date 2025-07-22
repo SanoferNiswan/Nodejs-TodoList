@@ -100,7 +100,7 @@
             const btnText = ele.innerText.split(' ')[0]
 
             // filter todos in here
-            const count = todos.filter(val => {
+            const count = todos?.filter(val => {
                 if (btnText === 'All') {
                     return true
                 }
@@ -232,6 +232,8 @@
 
         } catch (err) {
             console.log(err.message)
+            authBtn.innerText = 'Submit'
+            isAuthenticating = false
             error.innerText = err.message
             error.style.display = 'block'
         } finally {
@@ -249,11 +251,15 @@
     // CRUD LOGIC
 
     async function fetchTodos() {
+        console.log("here fetch todo");
+        
         isLoading = true
         const response = await fetch(apiBase + 'todos', {
             headers: { 'Authorization': token }
         })
+        
         const todosData = await response.json()
+        console.log("response:",todosData);
         todos = todosData
         isLoading = false
         renderTodos()

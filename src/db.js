@@ -1,8 +1,8 @@
 // import {DatabaseSync} from "node:sqlite"
+// const db = new DatabaseSync(':memory:');
 import Database from 'better-sqlite3';
 
 const db = new Database(':memory:');
-// const db = new DatabaseSync(':memory:');
 
 // Enable foreign key constraints
 db.exec('PRAGMA foreign_keys = ON');
