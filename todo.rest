@@ -1,3 +1,5 @@
+# let token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTc4NTM0LCJleHAiOjE3NTMyNjQ5MzR9.8B47NoT1uMbLtpEUpO6B0nmgMrO7Htg24DOdbpHGZvs
+
 ### get the UI page
 
 GET http://localhost:3000/
@@ -27,5 +29,30 @@ Content-Type: application/json
 ### fetch all todos
 
 GET http://localhost:3000/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTc1NTUxLCJleHAiOjE3NTMyNjE5NTF9.dFasc-wrgH8WFJW-BEaWz5ohqTcqOh1skRbA9gsODaU
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTgwMjE2LCJleHAiOjE3NTMyNjY2MTZ9.7i01nPEWfSOnfCnlIkHnthzCwVcJN-Wcwe38-QhcTj0
+
+### create a new todo
+
+POST http://localhost:3000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTgwMjE2LCJleHAiOjE3NTMyNjY2MTZ9.7i01nPEWfSOnfCnlIkHnthzCwVcJN-Wcwe38-QhcTj0
+Content-Type: application/json
+
+{
+    "task":"second todo"
+}
+
+### Update the existing todo
+
+PUT http://localhost:3000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTgwMTIzLCJleHAiOjE3NTMyNjY1MjN9.18MzbWoJe1R7QH2DpCcaJgrCVB1OAhIAu-TTSsMmmJQ
+Content-Type: application/json
+
+{
+    "completed":1
+}
+
+### delete todo
+
+DELETE http://localhost:3000/todos/1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzUzMTc5OTE5LCJleHAiOjE3NTMyNjYzMTl9.KNmbRUpGR0qtTYpMU8_tnEglXXIdWg7mF_MnuBYuG1A
 
